@@ -1,13 +1,14 @@
 package com.lowleveldesign.turnedbasedaigameenginee.game;
 
+import lombok.Data;
+
+@Data
 public class Move {
     private Cell cell;
+    private Player player;
 
-    public Move(Cell cell) {
+    public Move(Cell cell, Player player) {
         this.cell = cell;
-    }
-
-    public Cell getCell() {
-        return cell;
+        this.player = player;
     }
 }

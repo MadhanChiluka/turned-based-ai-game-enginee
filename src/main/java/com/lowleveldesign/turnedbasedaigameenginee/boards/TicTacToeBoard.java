@@ -2,6 +2,7 @@ package com.lowleveldesign.turnedbasedaigameenginee.boards;
 
 import com.lowleveldesign.turnedbasedaigameenginee.game.Board;
 import com.lowleveldesign.turnedbasedaigameenginee.game.Cell;
+import com.lowleveldesign.turnedbasedaigameenginee.game.Move;
 
 public class TicTacToeBoard extends Board {
     String cells[][] = new String[3][3];
@@ -24,6 +25,11 @@ public class TicTacToeBoard extends Board {
             result += "\n";
         }
         return result;
+    }
+
+    @Override
+    public void move(Move move) {
+        setCell(move.getCell(), move.getPlayer().symbol());
     }
 
 }
