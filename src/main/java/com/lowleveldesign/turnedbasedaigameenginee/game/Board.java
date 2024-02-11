@@ -1,5 +1,7 @@
 package com.lowleveldesign.turnedbasedaigameenginee.game;
 
-public abstract class Board {
+public interface Board {
     public abstract void move(Move move);
+
+    public abstract Board copy();
 }
